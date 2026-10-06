@@ -25,6 +25,30 @@ W katalogu projektu uruchom:
 
 Aplikacja uruchamia się domyślnie na porcie `8080`.
 
+## Frontend demonstracyjny
+
+Projekt zawiera opcjonalny, prosty interfejs demonstracyjny napisany w React + Vite. Frontend znajduje się w katalogu `frontend/`.
+
+Do jego uruchomienia wymagane są Node.js i npm.
+
+Uruchom backend w pierwszym terminalu:
+
+```powershell
+.\mvnw.cmd spring-boot:run
+```
+
+Backend działa na porcie `8080`. W drugim terminalu uruchom frontend:
+
+```powershell
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend Vite działa domyślnie na porcie `5173`.
+
+Interfejs pozwala wybrać urządzenie do monitorowania, otwiera połączenie SSE, pokazuje aktualnie osiągalne urządzenia i pozwala zmienić stan urządzenia przez PATCH. Zmiany reachability są aktualizowane w interfejsie w czasie rzeczywistym na podstawie zdarzeń `INITIAL_STATE`, `ADDED` i `REMOVED`.
+
 ## Endpointy
 
 ### PATCH `/devices/{id}`
