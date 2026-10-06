@@ -1,11 +1,11 @@
 package com.networkmanagement.networkmanagementsystem.controller;
 
+import com.networkmanagement.networkmanagementsystem.service.TopologyService;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.junit.jupiter.api.BeforeEach;
-import com.networkmanagement.networkmanagementsystem.service.TopologyService;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;

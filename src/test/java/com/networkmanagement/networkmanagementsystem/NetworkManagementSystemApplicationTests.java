@@ -9,5 +9,4 @@ class NetworkManagementSystemApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }

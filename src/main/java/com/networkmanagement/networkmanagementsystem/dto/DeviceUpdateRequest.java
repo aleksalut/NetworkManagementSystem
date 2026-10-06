@@ -3,19 +3,18 @@ package com.networkmanagement.networkmanagementsystem.dto;
 public class DeviceUpdateRequest {
     private Boolean active;
 
-    public DeviceUpdateRequest(Boolean active){
+    public DeviceUpdateRequest(Boolean active) {
         this.active = active;
     }
-    public DeviceUpdateRequest(){
 
+    public DeviceUpdateRequest() {
     }
 
-
-    public Boolean getActive(){
+    public Boolean getActive() {
         return active;
     }
 
-    public void setActive(Boolean active){
+    public void setActive(Boolean active) {
         this.active = active;
     }
 }

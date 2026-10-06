@@ -27,5 +27,4 @@ public class Connection {
     public void setTo(int to) {
         this.to = to;
     }
-
 }

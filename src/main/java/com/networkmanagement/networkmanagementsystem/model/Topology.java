@@ -1,4 +1,5 @@
 package com.networkmanagement.networkmanagementsystem.model;
+
 import java.util.List;
 
 public class Topology {

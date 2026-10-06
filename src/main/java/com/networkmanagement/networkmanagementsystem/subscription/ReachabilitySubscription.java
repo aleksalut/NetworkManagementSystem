@@ -1,6 +1,7 @@
 package com.networkmanagement.networkmanagementsystem.subscription;
 
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
+
 import java.util.Set;
 
 public class ReachabilitySubscription {
@@ -17,17 +18,19 @@ public class ReachabilitySubscription {
         this.lastReachable = lastReachable;
     }
 
-    public int getDeviceId(){
+    public int getDeviceId() {
         return deviceId;
     }
-    public SseEmitter getEmitter(){
+
+    public SseEmitter getEmitter() {
         return emitter;
     }
-    public Set<Integer> getLastReachable(){
+
+    public Set<Integer> getLastReachable() {
         return lastReachable;
     }
 
-    public void setLastReachable(Set<Integer> lastReachable){
+    public void setLastReachable(Set<Integer> lastReachable) {
         this.lastReachable = lastReachable;
     }
 }

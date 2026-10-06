@@ -7,8 +7,8 @@ import com.networkmanagement.networkmanagementsystem.model.Topology;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayDeque;
 import java.io.InputStream;
+import java.util.ArrayDeque;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -23,7 +23,6 @@ public class TopologyService {
 
     @PostConstruct
     public void loadTopology() throws Exception {
-
         ObjectMapper objectMapper = new ObjectMapper();
 
         InputStream inputStream = getClass()
@@ -41,7 +40,6 @@ public class TopologyService {
             connections.get(connection.getFrom()).add(connection.getTo());
             connections.get(connection.getTo()).add(connection.getFrom());
         }
-
     }
 
     public boolean hasDevice(int id) {
@@ -76,14 +74,9 @@ public class TopologyService {
         return visited;
     }
 
-
     public Device updateDeviceActive(int id, Boolean active) {
         Device device = devices.get(id);
         device.setActive(active);
         return device;
-
     }
 }
-
-
-
