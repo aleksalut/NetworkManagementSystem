@@ -1,0 +1,11 @@
+PATCH http://localhost:8080/devices/14
+Content-Type: application/json
+
+{
+  "active": false
+}
+
+###
+GET http://localhost:8080/devices/7/reachable-devices
+Accept: text/event-stream
+
