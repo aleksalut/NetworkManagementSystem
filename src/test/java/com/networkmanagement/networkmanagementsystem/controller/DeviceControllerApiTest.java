@@ -1,5 +1,6 @@
 package com.networkmanagement.networkmanagementsystem.controller;
 
+import com.networkmanagement.networkmanagementsystem.service.ReachabilitySubscriptionService;
 import com.networkmanagement.networkmanagementsystem.service.TopologyService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,8 +21,10 @@ class DeviceControllerApiTest {
     void setUp() throws Exception {
         TopologyService topologyService = new TopologyService();
         topologyService.loadTopology();
+        ReachabilitySubscriptionService subscriptionService =
+                new ReachabilitySubscriptionService(topologyService);
         mockMvc = MockMvcBuilders
-                .standaloneSetup(new DeviceController(topologyService))
+                .standaloneSetup(new DeviceController(topologyService, subscriptionService))
                 .build();
     }
 
